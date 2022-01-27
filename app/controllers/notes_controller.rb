@@ -12,7 +12,7 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = Note.new(article_params)
+    @note = Note.new(note_params)
 
     if @note.save
       redirect_to @note     
@@ -37,8 +37,8 @@ class NotesController < ApplicationController
   end
 
   private 
-  def article_params
-    params.require(:article).permit(:title, :author, :body)
+  def note_params
+    params.require(:note).permit(:title, :author, :body)
   end
 
 end

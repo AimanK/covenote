@@ -1,0 +1,10 @@
+<h1>Add a New Book</h1>
+
+<%= simple_form_for @note do |f| %>
+    <div>
+        <%= f.input :title, label: "Book Title", error: "Book Title is necessary, please enter one." %><br>
+        <%= f.input :author, label: "Book Author", error: "Book Author is necessary, please enter one." %><br>
+        <%= f.input :body, label: "Enter your Covenote" %>
+        <%= f.button :submit %>
+    </div>
+<% end %>
