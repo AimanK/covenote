@@ -4,4 +4,13 @@
 
 <p>Notes: <%= @note.body %></p>
 
-<p><%= link_to "Edit Note", edit_note_path %></p>
+
+<ul>
+<li><%= link_to "Edit Note", edit_note_path %></li>
+
+<li><%= link_to "Delete Note", note_path(@note),
+data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+} %></li>
+</ul>
